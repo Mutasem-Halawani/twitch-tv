@@ -1,0 +1,23 @@
+{
+  "name": "twitch-tv",
+  "version": "0.0.1",
+  "description": "FreeCodeCamp Twitch-Tv-API Challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mutasem-Halawani/twitch-tv.git"
+  },
+  "keywords": [
+    "twitch",
+    "FCC"
+  ],
+  "author": "Mutasem Halawani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mutasem-Halawani/twitch-tv/issues"
+  },
+  "homepage": "https://github.com/Mutasem-Halawani/twitch-tv#readme"
+}
