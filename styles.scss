@@ -1,0 +1,47 @@
+// Variables
+$color-online: #0e9bd8;
+$color-offline: #940000;
+
+body,
+h1,
+h2,
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.body {
+  &__wrapper {
+    max-width: 860px;
+    background-color: red;
+    margin: 0 auto;
+  }
+}
+
+.header {
+
+}
+
+.main {
+
+    &__title {
+      font-size: 30px;
+      .dot {
+        color: #6745A6
+      }
+    }
+
+}
+
+.footer {
+
+}
+
+
+

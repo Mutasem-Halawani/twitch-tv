@@ -7,14 +7,47 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Twitch Tv</title>
 </head>
-<body>
+<body class="body">
+  <div class="body__wrapper">
+    <header class="header">
+      <div class="header__options">
+        <button class="header__btn btn">All</button>
+        <button class="header__btn btn">Offline</button>
+        <button class="header__btn btn">Online</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__header">
+        <h1 class="main__title">
+            Twitch
+            <span class="dot">
+              .
+            </span>
+            TV
+        </h1>
+      </div>
+      <div class="main__body">
+        <ul class="main__list">
+          <li class="main__list-item">
+            <p class="main__station">freeCodeCamp</p>
+            <p class="main__status">online</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      Made by
+      <a href="https://github.com/Mutasem-Halawani">Mutasem</a>
+    </footer>
+  </div>
 
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-      crossorigin="anonymous">
-    </script>
-    <script src="./script.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous">
+  </script>
+  <script src="./script.js"></script>
+
 </body>
 </html>
