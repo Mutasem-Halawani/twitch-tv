@@ -10,14 +10,19 @@ li {
 ul {
   list-style: none; }
 
-.body__wrapper {
-  max-width: 860px;
-  background-color: red;
-  margin: 0 auto; }
+.body {
+  background-color: lightgray; }
+  .body__wrapper {
+    max-width: 860px;
+    margin: 0 auto; }
 
 .main__title {
   font-size: 30px; }
   .main__title .dot {
     color: #6745A6; }
+.main__list-item--online {
+  background-color: #0e9bd8; }
+.main__list-item--offline {
+  background-color: #940000; }
 
 /*# sourceMappingURL=styles.css.map */

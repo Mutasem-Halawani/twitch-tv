@@ -1,6 +1,7 @@
 // Variables
 $color-online: #0e9bd8;
 $color-offline: #940000;
+$color-body: lightgray;
 
 body,
 h1,
@@ -17,9 +18,11 @@ ul {
 }
 
 .body {
+  background-color: $color-body;
+
   &__wrapper {
     max-width: 860px;
-    background-color: red;
+    // background-color: red;
     margin: 0 auto;
   }
 }
@@ -34,6 +37,16 @@ ul {
       font-size: 30px;
       .dot {
         color: #6745A6
+      }
+    }
+
+    &__list-item {
+      &--online {
+        background-color: $color-online;
+      }
+
+      &--offline {
+        background-color: $color-offline;
       }
     }
 
