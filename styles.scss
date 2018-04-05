@@ -33,12 +33,23 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0.5rem;
+
+  &__btn {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      background-color: red;
+    }
+  }
 }
 
 .main {
 
-  border: 1px solid black;
-  border-radius: 2px;
+  border: 2px solid black;
+  // border-radius: 2px;
   &__title {
     font-size: 30px;
     .dot {
@@ -51,7 +62,7 @@ ul {
     margin: 0.3rem 0;
     display: flex;
     justify-content: space-between;
-    border-radius: 5px;
+    // border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     &--online {
       background-color: $color-online;
@@ -60,6 +71,15 @@ ul {
     &--offline {
       background-color: $color-offline;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    width: 100px;
   }
 
 }

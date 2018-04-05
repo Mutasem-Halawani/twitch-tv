@@ -22,10 +22,13 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0.5rem; }
+  .header__btn:hover {
+    cursor: pointer; }
+  .header__btn--active {
+    background-color: red; }
 
 .main {
-  border: 1px solid black;
-  border-radius: 2px; }
+  border: 2px solid black; }
   .main__title {
     font-size: 30px; }
     .main__title .dot {
@@ -35,12 +38,16 @@ ul {
     margin: 0.3rem 0;
     display: flex;
     justify-content: space-between;
-    border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); }
     .main__list-item--online {
       background-color: #0e9bd8; }
     .main__list-item--offline {
       background-color: #940000; }
+    .main__list-item:last-child {
+      margin-bottom: 0; }
+  .main__img {
+    border-radius: 50%;
+    width: 100px; }
 
 .footer {
   text-align: center; }
