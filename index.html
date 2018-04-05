@@ -9,37 +9,43 @@
 </head>
 <body class="body">
   <div class="body__wrapper">
-    <header class="header">
-      <div class="header__options">
-        <button class="header__btn btn">All</button>
-        <button class="header__btn btn">Offline</button>
-        <button class="header__btn btn">Online</button>
-      </div>
-    </header>
     <main class="main">
-      <div class="main__header">
-        <h1 class="main__title">
-            Twitch
-            <span class="dot">
-              .
-            </span>
-            TV
-        </h1>
-      </div>
+      <!-- <div class="main__header"> -->
+        <header class="header">
+          <h1 class="main__title">
+              Twitch
+              <span class="dot">
+                .
+              </span>
+              TV
+          </h1>
+          <div class="header__options">
+            <button class="header__btn btn">All</button>
+            <button class="header__btn btn">Offline</button>
+            <button class="header__btn btn">Online</button>
+          </div>
+        </header>
+      <!-- </div> -->
       <div class="main__body">
         <ul class="main__list">
-          <li class="main__list-item--online">
-            <p class="main__station">freeCodeCamp</p>
-            <p class="main__status">online</p>
+          <li class="main__list-item main__list-item--online">
+            <a href="">
+              <p class="main__station">freeCodeCamp</p>
+            </a>
+              <p class="main__status">online</p>
           </li>
-          <li class="main__list-item--offline">
-            <p class="main__station">Coding Camp</p>
-            <p class="main__status">offline</p>
+          <!-- <li class="main__list-item main__list-item--offline">
+            <a href="">
+              <p class="main__station">Coding Camp</p>
+            </a>
+              <p class="main__status">offline</p>
           </li>
-          <li class="main__list-item">
-            <p class="main__station">my station</p>
-            <p class="main__status">----</p>
-          </li>
+          <li class="main__list-item main__list-item">
+            <a href="">
+              <p class="main__station">my station</p>
+            </a>
+              <p class="main__status">----</p>
+          </li> -->
         </ul>
       </div>
     </main>
@@ -55,6 +61,7 @@
     integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous">
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./script.js"></script>
 
 </body>
