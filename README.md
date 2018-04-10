@@ -1,3 +1,3 @@
 # twitch-tv
 
-Live-Verions : https://mutasem-halawani.github.io/twitch-tv/
+Live-Version : https://mutasem-halawani.github.io/twitch-tv/
