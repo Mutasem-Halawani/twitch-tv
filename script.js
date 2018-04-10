@@ -1,16 +1,16 @@
 'use strict'
 
 const $ = window.$
+const SEARCH = $('.header__search')
 const STATIONS = ['ESL_SC2', 'OgamingSC2', 'cretetion', 'freecodecamp', 'storbeck', 'habathcx', 'RobotCaleb', 'noobs2ninjas', 'Fortnite']
 
-const TEMPLATE = function getTemplate (station) {
+const TEMPLATE = function getTemplate(station) {
   $.ajax({
     type: 'GET',
     url: `https://wind-bow.gomix.me/twitch-api/channels/${station}?callback=?`,
     dataType: 'jsonp',
     success: function (data) {
-      // console.log(data)
-      (function getStreamingStatus () {
+      (function getStreamingStatus() {
         $.ajax({
           type: 'GET',
           url: `https://wind-bow.gomix.me/twitch-api/streams/${data._id}`,
@@ -32,12 +32,11 @@ const TEMPLATE = function getTemplate (station) {
             `
             $('.main__list').append(template)
           },
+
           error: function (err) {
             console.log(err)
             return err
           }
-        }).done(function () {
-          console.log($('.main__station').text())
         })
       }(data))
     },
@@ -48,6 +47,7 @@ const TEMPLATE = function getTemplate (station) {
   })
 }
 
+// Take Stations and build template
 STATIONS.forEach((station) => {
   TEMPLATE(station)
 })
@@ -59,23 +59,47 @@ $(document).ready(function () {
       $(e.target).addClass('header__btn--active')
     }
 
+    // All/Online/Offline Button Click
     let option = $(e.target).data().option
     switch (option) {
-      case 'all':
-        // console.log('case is all')
-        break
       case 'on':
-        // console.log('case is on')
+        if ($('.main__status').data().status === 'offline') {
+          $('.main__status').closest('.main__list-item')
+            .css('display', 'none')
+        } else {
+          $('.main__status').closest('.main__list-item')
+            .css('display', '')
+        }
         break
       case 'off':
-        // console.log('case is off')
+        if ($('.main__status').data().status === 'online') {
+          $('.main__status').closest('.main__list-item')
+            .css('display', 'none')
+        } else {
+          $('.main__status').closest('.main__list-item')
+            .css('display', '')
+        }
         break
+      case 'all':
       default:
+        $('.main__list-item').css('display', '')
         break
     }
   })
+})
 
-  // const SEARCH = $('.header__search')
-  // let filter = SEARCH.val().toUpperCase()
-
+// Search Mechanism
+SEARCH.on('keyup', function (e) {
+  let query = e.target.value.toUpperCase()
+  let stations = $('.main__station').toArray()
+  for (let i = 0; i < stations.length; i++) {
+    let station = $(stations[i]).text().toUpperCase()
+    if (station.indexOf(query) > -1) {
+      $(stations[i]).closest('.main__list-item')
+        .css('display', '')
+    } else {
+      $(stations[i]).closest('.main__list-item')
+        .css('display', 'none')
+    }
+  }
 })

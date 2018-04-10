@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body,
 h1,
 h2,
@@ -11,8 +14,13 @@ p {
 ul {
   list-style: none; }
 
+input,
+button {
+  font-family: inherit; }
+
 .body {
-  background-color: lightgray; }
+  font-family: 'Gugi', cursive;
+  background-color: #ECF0E7; }
   .body__wrapper {
     max-width: 860px;
     margin: 0 auto; }
@@ -22,17 +30,29 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0.5rem; }
-  .header__btn:hover {
-    cursor: pointer; }
-  .header__btn--active {
-    background-color: red; }
+  .header__btn {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 0.1rem 1rem; }
+    .header__btn:hover {
+      cursor: pointer; }
+    .header__btn--active {
+      background-color: #6745A6; }
+  .header__search {
+    border-radius: 5px;
+    border: 2px solid gray;
+    background-color: black;
+    color: white; }
 
 .main {
+  background-color: white;
   border: 2px solid black; }
   .main__title {
     font-size: 30px; }
     .main__title .dot {
-      color: #6745A6; }
+      color: #6745A6;
+      margin-left: -12px;
+      margin-right: -18px; }
   .main__list-item {
     padding: 1rem 2.5rem;
     margin: 0.3rem 0;
@@ -40,16 +60,40 @@ ul {
     justify-content: space-between;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); }
     .main__list-item--online {
-      background-color: #0e9bd8; }
+      background-color: #35CD75; }
+      .main__list-item--online .main__status {
+        background-color: #00ff6b; }
     .main__list-item--offline {
-      background-color: #940000; }
+      background-color: #F1C40F; }
+      .main__list-item--offline .main__status {
+        background-color: #cdb10e; }
     .main__list-item:last-child {
       margin-bottom: 0; }
   .main__img {
     border-radius: 50%;
-    width: 100px; }
+    width: 50px; }
+  .main__inner-wrapper {
+    display: flex;
+    align-items: center; }
+  .main__station {
+    margin-left: 2rem; }
+  .main__status {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1rem; }
 
 .footer {
-  text-align: center; }
+  text-align: center;
+  padding: 4rem 0; }
+
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 1rem 0;
+    flex-direction: column;
+    min-height: 150px; }
+
+  .main__list-item {
+    padding: 1rem 0.5rem; } }
 
 /*# sourceMappingURL=styles.css.map */

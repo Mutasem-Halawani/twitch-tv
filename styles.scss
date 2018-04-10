@@ -1,7 +1,14 @@
 // Variables
-$color-online: #0e9bd8;
-$color-offline: #940000;
-$color-body: lightgray;
+$color-main: #6745A6;
+$color-online: #35CD75;
+$color-offline: #F1C40F;
+$color-body: #ECF0E7;
+$color-main-bkg: white;
+
+
+* {
+  box-sizing: border-box;
+}
 
 body,
 h1,
@@ -18,7 +25,13 @@ ul {
   list-style: none;
 }
 
+input,
+button {
+  font-family: inherit;
+}
+
 .body {
+  font-family: 'Gugi', cursive;
   background-color: $color-body;
 
   &__wrapper {
@@ -36,24 +49,36 @@ ul {
 
   &__btn {
 
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 0.1rem 1rem;
     &:hover {
       cursor: pointer;
     }
 
     &--active {
-      background-color: red;
+      background-color: $color-main;
     }
+  }
+
+  &__search {
+    border-radius: 5px;
+    border: 2px solid gray;
+    background-color: black;
+    color: white;
   }
 }
 
 .main {
-
+  background-color: $color-main-bkg;
   border: 2px solid black;
   // border-radius: 2px;
   &__title {
     font-size: 30px;
     .dot {
-      color: #6745A6
+      color: $color-main;
+      margin-left: -12px;
+      margin-right: -18px;
     }
   }
 
@@ -66,10 +91,17 @@ ul {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     &--online {
       background-color: $color-online;
+      .main__status {
+        background-color: #00ff6b;
+      }
     }
 
     &--offline {
       background-color: $color-offline;
+
+      .main__status {
+        background-color: #cdb10e;
+      }
     }
 
     &:last-child {
@@ -79,14 +111,43 @@ ul {
 
   &__img {
     border-radius: 50%;
-    width: 100px;
+    width: 50px;
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__station {
+    margin-left: 2rem;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1rem;
   }
 
 }
 
 .footer {
   text-align: center;
+  padding: 4rem 0;
 }
 
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 1rem 0;
+    flex-direction: column;
+    min-height: 150px;
+  }
 
+  .main {
+    &__list-item {
+      padding: 1rem 0.5rem;
+    }
 
+  }
+}
